@@ -5,26 +5,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/screen.css" media="all">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
     <nav>
-        <p>home</p>
-        <p>about</p>
-        <p>hear</p>
-        <p>connect</p>
-        <p>see</p>
+        <p><a href="#home">home</a></p>
+        <p><a href="#about">about</a></p>
+        <p><a href="#hear">hear</a></p>
+        <p><a href="#connect">connect</a></p>
+        <p><a href="#see">see</a></p>
     </nav>
-<div class="wrap home">
-    <div class="content">
-            <h1>intro text header</h1>
+<div class="home-outer">
+    <div class="wrap home" id="home">
+    <div class="mobile-menu">
+        <p class="menu">Hannaniah Whitley</p>
+    </div>
+        <div class="content">
+                <h1>into text here</h1>
+        </div>
+    </div>
+    <div class="home-gradient">
     </div>
 </div>
-<div class="wrap about">
+<div class="wrap about" id="about">
     <div class="content">
             <h1>all about hannaniah</h1>
     </div>
 </div>
-<div class="wrap hear">
+<div class="wrap hear" id="hear">
     <div class="content">
             <div class="sample video-one">
                 <h1>funk</h1>
@@ -40,7 +48,7 @@
             </div>
     </div>
 </div>
-<div class="wrap connect">
+<div class="wrap connect" id="connect">
     <div class="content">
             <div class="contact-button book">
                 <h1>book</h1>
@@ -50,10 +58,17 @@
             </div>
     </div>
 </div>
-<div class="wrap see">
+<div class="wrap see" id="see">
     <div class="content">
             <h1>list of upcoming performances</h1>
     </div>
 </div>
 </body>
+<script>
+$(function() {
+    $('.mobile-menu').click(function() {
+        $('nav').toggleClass('mobile-nav');
+    });
+});
+</script>
 </html>
